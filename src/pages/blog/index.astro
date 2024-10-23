@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+	{
+		title: "Understanding Your Rights in a Personal Injury Case",
+		excerpt: "Learn about the key elements of personal injury law and what steps to take after an accident.",
+		date: "2024-01-15",
+		author: "Sarah Johnson, Esq.",
+		slug: "understanding-personal-injury-rights"
+	},
+	{
+		title: "Estate Planning Basics: What You Need to Know",
+		excerpt: "A comprehensive guide to estate planning, wills, and trusts for protecting your family's future.",
+		date: "2024-01-10",
+		author: "Michael Chen, Esq.",
+		slug: "estate-planning-basics"
+	},
+	{
+		title: "The Complete Guide to Business Incorporation",
+		excerpt: "Everything you need to know about incorporating your business and choosing the right structure.",
+		date: "2024-01-05",
+		author: "David Martinez, Esq.",
+		slug: "business-incorporation-guide"
+	}
+];
+---
+
+<Layout title="Legal Blog">
+	<div class="blog-header">
+		<h1>Legal Insights & Resources</h1>
+		<p>Stay informed with the latest legal news, tips, and expert advice</p>
+	</div>
+
+	<div class="blog-grid">
+		{posts.map(post => (
+			<article class="blog-card">
+				<div class="post-meta">
+					<span class="date">{new Date(post.date).toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}</span>
+					<span class="author">{post.author}</span>
+				</div>
+				<h2>{post.title}</h2>
+				<p>{post.excerpt}</p>
+				<a href={`/blog/${post.slug}`} class="read-more">Read More →</a>
+			</article>
+		))}
+	</div>
+</Layout>
+
+<style>
+	.blog-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.blog-header h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.blog-header p {
+		color: #666;
+		font-size: 1.2rem;
+	}
+
+	.blog-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.blog-card {
+		background: white;
+		border-radius: 8px;
+		padding: 2rem;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.blog-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.post-meta {
+		display: flex;
+		justify-content: space-between;
+		color: #666;
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+	}
+
+	.blog-card h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.blog-card p {
+		color: #444;
+		margin-bottom: 1.5rem;
+	}
+
+	.read-more {
+		color: var(--secondary-color);
+		text-decoration: none;
+		font-weight: 600;
+		display: inline-block;
+	}
+
+	.read-more:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.blog-header h1 {
+			font-size: 2rem;
+		}
+	}
+</style>

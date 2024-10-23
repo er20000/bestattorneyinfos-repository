@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Practice Areas - Best Attorney Infos">
+	<div class="hero">
+		<img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80" alt="Law library" class="hero-image" />
+		<h1>Our Practice Areas</h1>
+	</div>
+	
+	<div class="practice-areas">
+		<div class="area">
+			<img src="https://images.unsplash.com/photo-1563225409-127c18758bd5?auto=format&fit=crop&q=80" alt="Personal injury" />
+			<h2>Personal Injury</h2>
+			<p>Expert representation for accident victims, including car accidents, slip and falls, and workplace injuries.</p>
+		</div>
+
+		<div class="area">
+			<img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?auto=format&fit=crop&q=80" alt="Family law" />
+			<h2>Family Law</h2>
+			<p>Compassionate guidance through divorce, child custody, adoption, and other family matters.</p>
+		</div>
+
+		<div class="area">
+			<img src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?auto=format&fit=crop&q=80" alt="Criminal defense" />
+			<h2>Criminal Defense</h2>
+			<p>Strong defense strategies for both misdemeanor and felony charges.</p>
+		</div>
+
+		<div class="area">
+			<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80" alt="Real estate" />
+			<h2>Real Estate Law</h2>
+			<p>Comprehensive legal services for residential and commercial real estate transactions.</p>
+		</div>
+
+		<div class="area">
+			<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80" alt="Business law" />
+			<h2>Business Law</h2>
+			<p>Legal support for business formation, contracts, and commercial litigation.</p>
+		</div>
+
+		<div class="area">
+			<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80" alt="Estate planning" />
+			<h2>Estate Planning</h2>
+			<p>Thorough estate planning services including wills, trusts, and probate administration.</p>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.hero {
+		position: relative;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 4rem;
+		overflow: hidden;
+	}
+
+	.hero-image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(0.3);
+	}
+
+	h1 {
+		position: relative;
+		font-size: 3rem;
+		font-weight: 700;
+		color: white;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.practice-areas {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		padding: 0 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.area {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 8px;
+		transition: transform 0.2s;
+	}
+
+	.area img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 4px;
+		margin-bottom: 1rem;
+	}
+
+	.area:hover {
+		transform: translateY(-5px);
+	}
+
+	h2 {
+		color: rgb(var(--accent-light));
+		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+</style>
