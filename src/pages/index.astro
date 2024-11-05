@@ -2,140 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Best Attorney Infos - Expert Legal Resources">
-	<div class="hero">
-		<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80" alt="Law office interior" class="hero-image" />
-		<div class="hero-content">
-			<h1>Welcome to <span class="text-gradient">Best Attorney Infos</span></h1>
-			<p class="tagline">Your Trusted Source for Legal Expertise</p>
-			
-			<div class="cta-section">
-				<a href="/practice-areas" class="cta-button">Our Practice Areas</a>
-				<a href="/about" class="cta-button">About Us</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="features">
-		<div class="feature">
-			<img src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?auto=format&fit=crop&q=80" alt="Legal consultation" class="feature-image" />
-			<h2>Expert Legal Counsel</h2>
-			<p>Our experienced attorneys provide comprehensive legal services across multiple practice areas.</p>
-		</div>
-		<div class="feature">
-			<img src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&q=80" alt="Client meeting" class="feature-image" />
-			<h2>Client-Focused Approach</h2>
-			<p>We prioritize your needs and work tirelessly to achieve the best possible outcomes for your case.</p>
-		</div>
-		<div class="feature">
-			<img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80" alt="Legal documents" class="feature-image" />
-			<h2>Proven Track Record</h2>
-			<p>Years of successful cases and satisfied clients speak to our commitment to excellence.</p>
-		</div>
-	</div>
-</Layout>
-
-<style>
-	.hero {
-		position: relative;
-		height: 600px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 4rem;
-		overflow: hidden;
-	}
-
-	.hero-image {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		filter: brightness(0.3);
-	}
-
-	.hero-content {
-		position: relative;
-		text-align: center;
-		color: white;
-		padding: 2rem;
-	}
-
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		margin-bottom: 0.5em;
-	}
-
-	.tagline {
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
-	}
-
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-
-	.cta-section {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-	}
-
-	.cta-button {
-		background: rgb(var(--accent));
-		color: white;
-		padding: 0.8rem 1.5rem;
-		border-radius: 4px;
-		text-decoration: none;
-		transition: background-color 0.2s;
-	}
-
-	.cta-button:hover {
-		background: rgb(var(--accent-dark));
-	}
-
-	.features {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		padding: 0 2rem;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.feature {
-		background: rgba(255, 255, 255, 0.1);
-		padding: 1.5rem;
-		border-radius: 8px;
-		text-align: center;
-	}
-
-	.feature-image {
-		width: 100%;
-		height: 200px;
-		object-fit: cover;
-		border-radius: 4px;
-		margin-bottom: 1rem;
-	}
-
-	.feature h2 {
-		color: rgb(var(--accent-light));
-		margin-bottom: 1rem;
-	}
-
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 2.5rem;
-		}
+<Layout title="Best Attorney Infos - Your Trusted Legal Resource" description="Find reliable legal information and expert advice on various law topics at Best Attorney Infos. Your go-to resource for understanding your rights and legal processes.">
+	<main>
+		<h1>Welcome to Best Attorney Infos</h1>
+		<p>Your trusted source for legal information and guidance. Explore our comprehensive resources on various legal topics to better understand your rights and legal processes.</p>
 		
-		.hero {
-			height: 400px;
-		}
-	}
-</style>
+		<section>
+			<h2>Featured Legal Topics</h2>
+			<ul>
+				<li><a href="/personal-injury">Personal Injury Law</a></li>
+				<li><a href="/family-law">Family Law</a></li>
+				<li><a href="/criminal-defense">Criminal Defense</a></li>
+				<li><a href="/estate-planning">Estate Planning</a></li>
+			</ul>
+		</section>
+		
+		<img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Law books and gavel" width="600" height="400">
+	</main>
+</Layout>
